@@ -1,0 +1,112 @@
+@use './variables' as vars;
+@use 'sass:math';
+
+.footer {
+    background-color: vars.$black;
+    color: vars.$white;
+    padding: vars.$base-padding * 2;
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: vars.$base-margin;
+      .footer-section {
+        flex: 1 1 calc(25% - vars.$base-margin);
+        min-width: 200px;
+        h3 {
+          font-size: vars.$font-size-lg;
+          margin-bottom: vars.$base-margin;
+          color: vars.$primary;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            margin-bottom: vars.$base-padding;
+            color: vars.$gray;
+            font-size: vars.$base-font-size;
+            &:hover {
+              color: vars.$secondary;
+              cursor: pointer;
+            }
+          }
+        }
+        &.newsletter {
+          p {
+            font-size: vars.$font-size-sm;
+            margin-bottom: vars.$base-padding;
+          }
+          .newsletter-form {
+            display: flex;
+            gap: vars.$base-padding;
+            input {
+              flex: 1;
+              padding: vars.$base-padding;
+              border: vars.$base-border-thickness solid vars.$gray;
+              border-radius: vars.$base-border-radius;
+              font-size: vars.$base-font-size;
+              color: vars.$black;
+            }
+            button {
+              display: flex;
+              align-items: center;
+              gap: vars.$base-padding ;
+              background-color: vars.$primary;
+              color: vars.$white;
+              border: none;
+              padding: vars.$base-padding;
+              border-radius: vars.$base-border-radius;
+              box-shadow: vars.$base-box-shadow;
+              i {
+                font-size: vars.$font-size-sm;
+              }
+              &:hover {
+                background-color: vars.$secondary;
+                cursor: pointer;
+              }
+            }
+          }
+          .social-icons {
+            margin-top: vars.$base-padding;
+            display: flex;
+            gap: vars.$base-padding;
+            i {
+              font-size: vars.$font-size-lg;
+              color: vars.$gray;
+              &:hover {
+                color: vars.$secondary;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: vars.$base-padding * 2;
+      font-size: vars.$font-size-sm;
+      color: vars.$gray;
+    }
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      .footer-section {
+        flex: 1 1 100%;
+        text-align: center;
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    .newsletter-form {
+      flex-direction: column;
+      button {
+        width: 100%;
+      }
+    }
+}

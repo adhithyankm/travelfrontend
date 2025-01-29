@@ -1,0 +1,56 @@
+@use './variables' as vars;
+
+  .form-container {
+    background: vars.$white;
+    padding: vars.$base-padding * 3;
+    margin: vars.$base-margin * 2 auto;
+    border-radius: vars.$base-border-radius;
+    box-shadow: vars.$base-box-shadow;
+    width: 300px;
+    border: vars.$base-border-thickness solid vars.$gray;
+
+    h2 {
+      margin-bottom: vars.$base-margin;
+      font-size: vars.$font-size-lg;
+      color: vars.$black;
+    }
+
+    label {
+      display: block;
+      margin-bottom: vars.$base-margin * 0.5;
+      font-weight: bold;
+      color: vars.$gray;
+    }
+
+    .p-inputtext {
+      width: 100%;
+      padding: vars.$base-padding;
+      margin-bottom: vars.$base-margin;
+      border: vars.$base-border-thickness solid vars.$gray;
+      border-radius: vars.$base-border-radius;
+      font-size: vars.$base-font-size;
+    }
+
+    button {
+      width: 100%;
+      padding: vars.$base-padding;
+      background-color: vars.$primary;
+      color: vars.$white;
+      border: none;
+      border-radius: vars.$base-border-radius;
+      font-size: vars.$base-font-size;
+      cursor: pointer;
+
+      &:hover {
+        background-color: vars.$secondary;
+      }
+    }
+
+    small {
+      display: block;
+      margin-top: vars.$base-margin * 0.5;
+      margin-bottom: vars.$base-margin * 0.5;
+      color: vars.$error;
+      font-size: vars.$font-size-sm;
+    }
+  }
