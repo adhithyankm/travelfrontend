@@ -19,11 +19,13 @@ const store = createStore({
       commit('setUser', user);
     },
     login({ state }, credentials) {
-      const storedUser = JSON.parse(localStorage.getItem('user'));
+      const storedUser = state.user; 
+      
       if (storedUser && storedUser.name === credentials.name && storedUser.password === credentials.password) {
-        return true;
+        return true; 
       }
-      return false;
+      
+      return false; 
     },
     logout({ commit }) {
       commit('logout');
@@ -35,5 +37,6 @@ const store = createStore({
     },
   },
 });
+
 
 export default store;

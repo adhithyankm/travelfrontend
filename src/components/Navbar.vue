@@ -14,13 +14,13 @@
       <li> <router-link to="/gallery"><a>Gallery</a></router-link></li>
       <li> <router-link to="/contact"><a>Contact</a></router-link></li>
       <li class="signin-item"> 
-        <router-link to="/signin"> 
-          <button class="signin-button">Log In</button>
+        <router-link to="/login"> 
+          <button class="login-button">Log In</button>
         </router-link>
       </li>
     </ul>
     <div class="navbar-right">
-      <router-link to="/login"> <button class="signin-button">Log In</button></router-link>
+      <router-link to="/login"> <button class="login-button">Log In</button></router-link>
     </div>
   </nav>
 </template>

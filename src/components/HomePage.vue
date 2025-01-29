@@ -7,10 +7,10 @@
         <h1>Extraordinary natural and cultural charm</h1>
         <p>Exploring India is an unforgettable adventure.</p>
         <div class="search-bar flex gap-2">
-          <DatePicker class="inputs custom-datepicker" v-model="date" placeholder="Date From:" />
-          <DatePicker class="inputs custom-datepicker" v-model="date" placeholder="Date To:" />
-          <InputNumber class="inputs" v-model="value1" inputId="integeronly" fluid placeholder="Budget (INR)" />
-          <InputNumber class="inputs" v-model="value1" inputId="integeronly" fluid placeholder="Guest" />
+          <DatePicker class="inputs custom-datepicker"  placeholder="Date From:" />
+          <DatePicker class="inputs custom-datepicker"  placeholder="Date To:" />
+          <InputNumber class="inputs"  inputId="integeronly" fluid placeholder="Budget (INR)" />
+          <InputNumber class="inputs"  inputId="integeronly" fluid placeholder="Guest" />
           <button class="p-button p-component">Search</button>
         </div>
       </div>
@@ -53,6 +53,7 @@ import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
 import TourCard from './TourCard.vue'
 import ExperienceCard from './ExperienceCard.vue'
+import store from '../storage';
 const tours = [
   {
     title: 'Karnataka Tour',
