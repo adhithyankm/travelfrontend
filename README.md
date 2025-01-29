@@ -27,5 +27,4 @@ npm run dev
 ```sh
 npm run build
 
-//just a test commit
 ```
