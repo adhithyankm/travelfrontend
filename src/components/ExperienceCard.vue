@@ -1,19 +1,12 @@
 <template>
-
     <div class="experience-card container">
         <div class="experience-head flex justify-content-around">
             <div class="experience-header">
                 <p class="experience-subtitle">[WHAT'S INCLUDED]</p>
                 <h2 class="experience-title">What's Covered in Your Experience</h2>
             </div>
-            <div class="experience-actions">
-                <button class="contact-btn p-button p-button-text">
-                    <router-link to="/contact">Contact</router-link>
-                </button>
-            </div>
         </div>
         <div class="experience-content flex mt-3  ">
-
             <Accordion value="0">
                 <AccordionPanel v-for="tab in tabs" :key="tab.title" :value="tab.value">
                     <AccordionHeader>{{ tab.title }}</AccordionHeader>

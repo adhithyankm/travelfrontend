@@ -20,11 +20,9 @@ const store = createStore({
     },
     login({ state }, credentials) {
       const storedUser = state.user; 
-      
       if (storedUser && storedUser.name === credentials.name && storedUser.password === credentials.password) {
         return true; 
       }
-      
       return false; 
     },
     logout({ commit }) {
@@ -37,6 +35,5 @@ const store = createStore({
     },
   },
 });
-
 
 export default store;

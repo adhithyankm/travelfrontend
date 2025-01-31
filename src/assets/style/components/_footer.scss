@@ -89,6 +89,14 @@
       color: vars.$gray;
     }
   }
+
+  @media (max-width:1024px) {
+    .footer-container {
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+  }
   @media (max-width: 768px) {
     .footer-container {
       flex-direction: column;

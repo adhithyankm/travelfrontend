@@ -7,11 +7,11 @@
         <h1>Extraordinary natural and cultural charm</h1>
         <p>Exploring India is an unforgettable adventure.</p>
         <div class="search-bar flex gap-2">
-          <DatePicker class="inputs custom-datepicker"  placeholder="Date From:" />
-          <DatePicker class="inputs custom-datepicker"  placeholder="Date To:" />
-          <InputNumber class="inputs"  inputId="integeronly" fluid placeholder="Budget (INR)" />
-          <InputNumber class="inputs"  inputId="integeronly" fluid placeholder="Guest" />
-          <button class="p-button p-component">Search</button>
+          <DatePicker class="inputs custom-datepicker" placeholder="Date From:" />
+          <DatePicker class="inputs custom-datepicker" placeholder="Date To:" />
+          <InputNumber class="inputs" inputId="integeronly" fluid placeholder="Budget (INR)" />
+          <InputNumber class="inputs" inputId="integeronly" fluid placeholder="Guest" />
+          <button class="home-search-button p-component">Search</button>
         </div>
       </div>
     </section>
@@ -51,8 +51,8 @@
 <script setup>
 import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
-import TourCard from './TourCard.vue'
-import ExperienceCard from './ExperienceCard.vue'
+import TourCard from './TourCard.vue';
+import ExperienceCard from './ExperienceCard.vue';
 import store from '../storage';
 const tours = [
   {
@@ -61,12 +61,12 @@ const tours = [
     image: "../../src/assets/img/pexels-k3ithvision-4134644.jpg",
   },
   {
-    title: 'Kargil Tour ',
+    title: 'Kargil Tour',
     subtitle: 'Ladakh',
-    image: "../../src/assets/img/ladak (2).jpg"
+    image: "../../src/assets/img/ladak (2).jpg",
   },
   {
-    title: 'Uttarpredesh',
+    title: 'Uttar Pradesh',
     subtitle: 'Taj Mahal',
     image: "../../src/assets/img/taj india.jpg",
   },
@@ -89,7 +89,6 @@ const getGridClass = (index) => {
 </script>
 
 <style scoped>
-
 .hero {
   position: relative;
   background-image: url('../assets/IMG/lake.jpg');
@@ -98,19 +97,25 @@ const getGridClass = (index) => {
   text-align: center;
   color: #fff;
   height: 80vh;
- 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-overlay {
-  
   background: rgba(5, 5, 5, 0.5);
   padding: 4rem;
   border-radius: 8px;
   font-size: xx-large;
   font-weight: bold;
+  text-align: center;
+  max-width: 80%;
 }
-
 .search-bar {
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 .search-bar .inputs {
   flex: 1;
@@ -118,44 +123,58 @@ const getGridClass = (index) => {
   border-radius: 4px;
   border: 1px solid white;
   text-decoration-color: #fff;
+  min-width: 150px;
 }
-.p-button {
+.search-bar button {
+  padding: 0.5rem 1rem;
+}
+.home-search-button {
   background: rgba(7, 7, 7, 0.682);
   color: white;
   border: 1px solid white;
   cursor: pointer;
 }
-.p-button:hover {
-  background: rgba(167, 142, 142, 0.682);
-  color: white;
-  border: 1px solid white;
-  cursor: pointer;
-}
-.search-bar button {
-  padding: 0.5rem 1rem;
-}
 
+.tour-header {
+  text-align: center;
+  margin: 2rem 0;
+}
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.grid-item {
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.grid-item:hover {
+  transform: scale(1.05);
+}
 @media (max-width: 768px) {
   .hero-overlay {
-    font-size: medium;
-    margin-top: .3rem;
+    font-size: large;
+    padding: 2rem;
+    max-width: 90%;
   }
   .search-bar {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
-
-}
-@media (max-width: 999px) {
-  .hero-overlay {
-    font-size: x-large;
-    margin-top: .3rem;
+  .search-bar .inputs {
+    width: 100%;
+  }
+  .search-bar button {
+    width: 100%;
   }
 }
 @media (max-width: 499px) {
   .hero-overlay {
-    font-size: small;
-    margin-top: .3rem;
+    font-size: medium;
+    padding: 1.5rem;
+    max-width: 95%;
   }
 }
 </style>

@@ -14,12 +14,10 @@
                         </div>
                     </div>
                     <div class="mb-4 font-medium">{{ slotProps.data.name }}</div>
-
                 </div>
             </template>
         </Carousel>
     </div>
-   
     <Footer />
 </template>
 

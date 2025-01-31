@@ -1,4 +1,4 @@
 <template>
   <router-view/>
-  <Toast/>
+  <Toast />
 </template>

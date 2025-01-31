@@ -13,7 +13,6 @@
             <li>Gallery</li>
           </ul>
         </div>
-  
         <!-- Support Section -->
         <div class="footer-section">
           <h3>Support</h3>
@@ -26,7 +25,6 @@
             <li>Call Center</li>
           </ul>
         </div>
-  
         <!-- FAQ Section -->
         <div class="footer-section">
           <h3>FAQ</h3>

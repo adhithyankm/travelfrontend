@@ -2,7 +2,6 @@
   <nav class="navbar">
     <div class="navbar-left">
       <h1 class="brand-name">
-
           MyBrand
         </h1>
     </div>
@@ -13,6 +12,7 @@
       <li> <router-link to="/"><a>Home</a></router-link></li>
       <li> <router-link to="/gallery"><a>Gallery</a></router-link></li>
       <li> <router-link to="/contact"><a>Contact</a></router-link></li>
+      <li class="signin-user" v-if="isAuthenticated"> <a>Welcome {{ user.name }}</a></li>
       <li class="signin-item"> 
         <router-link to="/login"> 
           <button class="login-button">Log In</button>
@@ -20,18 +20,25 @@
       </li>
     </ul>
     <div class="navbar-right">
+      <span v-if="isAuthenticated"> Welcome {{ user.name }} </span>
       <router-link to="/login"> <button class="login-button">Log In</button></router-link>
     </div>
   </nav>
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import { ref } from 'vue';
+import store from '@/storage';
+
 const isMenuOpen = ref(false);
 
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
+
+const isAuthenticated = computed(() => store.getters.isAuthenticated);
+const user = computed(() => store.state.user);
 </script>
 
 <style scoped>
@@ -67,18 +74,6 @@ function toggleMenu() {
 .nav-links a:hover {
   color: #00bcd4;
 }
-.signin-button {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #00bcd4;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.signin-button:hover {
-  background-color: #008c9e;
-}
 .hamburger {
   display: none;
   cursor: pointer;
@@ -87,6 +82,7 @@ function toggleMenu() {
   font-size: 24px;
   color: white;
 }
+
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -117,8 +113,11 @@ function toggleMenu() {
 }
 
 @media (min-width: 769px) {
-  .signin-item {
+  .signin-item, .signin-user {
     display: none;
+  }
+  .navbar-right span {
+    padding: 20px;
   }
 }
 </style>

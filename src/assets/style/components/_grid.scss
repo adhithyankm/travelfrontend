@@ -6,6 +6,11 @@
     gap: 2rem;
     box-sizing: border-box;
 }
+@media (max-width:449px) {
+  .grid-cards {
+    margin: 0;
+  }
+}
 
 .tourism {
   padding: 3rem;
