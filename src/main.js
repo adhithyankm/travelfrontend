@@ -18,6 +18,7 @@ import Menubar from 'primevue/menubar';
 import Carousel from 'primevue/carousel';
 import ProgressSpinner from 'primevue/progressspinner';
 
+
 import './assets/style/index.scss'
 
 const app = createApp(App)

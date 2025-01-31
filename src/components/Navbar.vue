@@ -10,9 +10,9 @@
     </div>
     <ul class="nav-links" :class="{ 'active': isMenuOpen }">
       <li> <router-link to="/"><a>Home</a></router-link></li>
-      <li> <router-link to="/gallery"><a>Gallery</a></router-link></li>
-      <li> <router-link to="/contact"><a>Contact</a></router-link></li>
-      <li class="signin-user" v-if="isAuthenticated"> <a>Welcome {{ user.name }}</a></li>
+      <li> <router-link to="/gallery">Gallery</router-link></li>
+      <li> <router-link to="/contact">Contact</router-link></li>
+      <li class="signin-user" v-if="isAuthenticated"> Welcome {{ user.name }} </li>
       <li class="signin-item"> 
         <router-link to="/login"> 
           <button class="login-button">Log In</button>
