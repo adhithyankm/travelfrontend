@@ -8,20 +8,17 @@
   box-shadow: vars.$base-box-shadow;
   width: 300px;
   border: vars.$base-border-thickness solid vars.$gray;
-
   h2 {
     margin-bottom: vars.$base-margin;
     font-size: vars.$font-size-lg;
     color: vars.$black;
   }
-
   label {
     display: block;
     margin-bottom: vars.$base-margin * 0.5;
     font-weight: bold;
     color: vars.$gray;
   }
-
   .p-inputtext {
     width: 100%;
     padding: vars.$base-padding;
@@ -30,7 +27,6 @@
     border-radius: vars.$base-border-radius;
     font-size: vars.$base-font-size;
   }
-
   button {
     width: 100%;
     padding: vars.$base-padding;
@@ -40,12 +36,10 @@
     border-radius: vars.$base-border-radius;
     font-size: vars.$base-font-size;
     cursor: pointer;
-
     &:hover {
       background-color: vars.$secondary;
     }
   }
-
   small {
     display: block;
     margin-top: vars.$base-margin * 0.5;
@@ -54,41 +48,29 @@
     font-size: vars.$font-size-sm;
   }
 }
-
-/* 🔥 Toast Styling */
 .p-toast {
   z-index: 9999;
 }
-
-/* Success Toast */
 .p-toast-message-success {
   background-color: vars.$green !important;
   color: vars.$white !important;
   border-left: 5px solid vars.$primary;
 }
-
-/* Error Toast */
 .p-toast-message-error {
   background-color: vars.$error !important;
   color: vars.$white !important;
   border-left: 5px solid vars.$red;
 }
-
-/* Warning Toast */
 .p-toast-message-warn {
   background-color: vars.$info !important;
   color: vars.$black !important;
   border-left: 5px solid vars.$orange;
 }
-
-/* Info Toast */
 .p-toast-message-info {
   background-color: vars.$blue !important;
   color: vars.$white !important;
   border-left: 5px solid vars.$purple;
 }
-
-/* 🔥 Toast Animations */
 .p-toast-message {
   border-radius: vars.$base-border-radius;
   font-size: vars.$base-font-size;
@@ -96,11 +78,9 @@
   padding: vars.$base-padding * 1.5;
   transition: all 0.3s ease-in-out;
 }
-
 .p-toast-message-enter-active {
   animation: slideIn 0.3s ease-out;
 }
-
 .p-toast-message-leave-active {
   animation: fadeOut 0.3s ease-in-out;
 }
