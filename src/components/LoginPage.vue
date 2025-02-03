@@ -8,33 +8,21 @@
           <label for="name">Name:</label>
           <InputText id="name" v-model="form.name" placeholder="Enter your name" />
           <small v-for="(error, index) in v$.form.name.$errors" :key="index">{{ error.$message }}</small>
-
           <label for="password">Password:</label>
           <InputText id="password" v-model="form.password" placeholder="Enter your Password" />
           <small v-for="(error, index) in v$.form.password.$errors" :key="index">{{ error.$message }}</small>
-
           <label for="email">Email:</label>
           <InputText id="email" v-model="form.email" placeholder="Enter your email" />
           <small v-for="(error, index) in v$.form.email.$errors" :key="index">{{ error.$message }}</small>
-
           <label for="age">Age:</label>
           <InputNumber id="age" v-model="form.age" mode="decimal" placeholder="Enter your age" class="p-inputtext-sm" />
           <small v-for="(error, index) in v$.form.age.$errors" :key="index">{{ error.$message }}</small>
-
           <label for="location">Location:</label>
           <InputText id="location" v-model="form.location" placeholder="Enter your location" />
           <small v-for="(error, index) in v$.form.location.$errors" :key="index">{{ error.$message }}</small>
-
           <button type="submit" class="p-button main-button p-component" :disabled="loading">
             Sign In
           </button>
-
-          <div class="card flex justify-center" v-if="loading">
-            <ProgressSpinner style="width: 50px; height: 50px" strokeWidth="8" fill="transparent"
-              animationDuration=".5s" aria-label="Custom ProgressSpinner" />
-          </div>
-
-          <Toast />
         </form>
         <p>Back to <button class="back-button" @click="toggleForm">Login</button></p>
       </div>
@@ -45,19 +33,14 @@
           <label for="name">Name:</label>
           <InputText id="name" v-model="logForm.name" placeholder="Enter your name" />
           <small v-for="(error, index) in vv$.logForm.name.$errors" :key="index">{{ error.$message }}</small>
-
           <label for="password">Password:</label>
           <InputText id="password" v-model="logForm.password" placeholder="Enter your Password" />
           <small v-for="(error, index) in vv$.logForm.password.$errors" :key="index">{{ error.$message }}</small>
-
           <button class="main-button" type="submit" :disabled="loading">Login</button>
-
           <div class="card flex justify-center" v-if="loading">
             <ProgressSpinner style="width: 50px; height: 50px" strokeWidth="8" fill="transparent"
               animationDuration=".5s" aria-label="Custom ProgressSpinner" />
           </div>
-
-          <Toast />
         </form>
         <p>Click to <button class="back-button" @click="toggleForm">Sign In</button></p>
       </div>
