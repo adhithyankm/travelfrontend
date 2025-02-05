@@ -120,7 +120,6 @@ const logRules = computed(() => ({
 
 const v$ = useVuelidate(rules, { form }, { $autoDirty: true });
 const vv$ = useVuelidate(logRules, { logForm }, { $autoDirty: true });
-
 const handleSignIn = async () => {
   loading.value = true;
   const isValid = await v$.value.$validate();

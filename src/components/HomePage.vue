@@ -1,6 +1,5 @@
 <template>
   <div class="home-page">
-    <!-- Hero Section -->
     <Navbar />
     <section class="hero">
       <div class="hero-overlay">
@@ -15,16 +14,14 @@
         </div>
       </div>
     </section>
-    <!-- Stats Section -->
-    <section class="grid-cards grid justify-content-evenly align-items-center">
+    <section class="grid-cards">
       <Card v-for="card in cards" :key="card.id">
         <template #title>{{ card.title }}</template>
         <template #content>
-          <p class="m-0">{{ card.content }}</p>
+          {{ card.content }}
         </template>
       </Card>
     </section>
-    <!-- Tourism Section -->
     <section class="tourism">
       <div class="tour-header">
         <div class="tour-head">
@@ -47,13 +44,11 @@
     <Footer />
   </div>
 </template>
-
 <script setup>
 import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
 import TourCard from './TourCard.vue';
 import ExperienceCard from './ExperienceCard.vue';
-import store from '../storage';
 const tours = [
   {
     title: 'Karnataka Tour',
@@ -87,7 +82,6 @@ const getGridClass = (index) => {
   return gridClasses[index] || 'span-1';
 };
 </script>
-
 <style scoped>
 .hero {
   position: relative;
@@ -121,12 +115,13 @@ const getGridClass = (index) => {
   flex: 1;
   padding: 0.5rem;
   border-radius: 4px;
-  border: 1px solid white;
-  text-decoration-color: #fff;
   min-width: 150px;
 }
 .search-bar button {
   padding: 0.5rem 1rem;
+  height: 95%;
+  align-self: center;
+  border-radius: 4px;
 }
 .home-search-button {
   background: rgba(7, 7, 7, 0.682);
@@ -134,7 +129,6 @@ const getGridClass = (index) => {
   border: 1px solid white;
   cursor: pointer;
 }
-
 .tour-header {
   text-align: center;
   margin: 2rem 0;

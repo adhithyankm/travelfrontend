@@ -47,7 +47,6 @@
     }
   }
 }
-
 .experience-card {
   margin: 0 auto;
   max-width: 1200px;
@@ -127,9 +126,7 @@
       }
     }
   }
-  
 }
-
 .contact-card {
   display: flex;
   flex-wrap: wrap;
@@ -164,7 +161,6 @@
       }
     }
   }
-
   .contact-form {
     flex: 1 1 50%;
     background: vars.$white;
@@ -212,7 +208,6 @@
     }
   }
 }
-
 @media (max-width: 768px) {
   .contact-card {
     flex-direction: column;

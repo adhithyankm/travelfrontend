@@ -20,19 +20,17 @@
     </div>
     <Footer />
 </template>
-
 <script setup>
 import { ref } from "vue";
 import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
 const indianCulture = [
-  { image: 'https://images.pexels.com/photos/27489411/pexels-photo-27489411.jpeg' }, 
-  { image: 'https://images.pexels.com/photos/27489412/pexels-photo-27489412.jpeg' }, 
-  { image: 'https://images.pexels.com/photos/27489413/pexels-photo-27489413.jpeg' }, 
-  { image: 'https://images.pexels.com/photos/27489414/pexels-photo-27489414.jpeg' },  
-  { image: 'https://images.pexels.com/photos/27489416/pexels-photo-27489416.jpeg' }, 
+    { image: 'https://images.pexels.com/photos/27489411/pexels-photo-27489411.jpeg' },
+    { image: 'https://images.pexels.com/photos/27489412/pexels-photo-27489412.jpeg' },
+    { image: 'https://images.pexels.com/photos/27489413/pexels-photo-27489413.jpeg' },
+    { image: 'https://images.pexels.com/photos/27489414/pexels-photo-27489414.jpeg' },
+    { image: 'https://images.pexels.com/photos/27489416/pexels-photo-27489416.jpeg' },
 ];
-
 
 const responsiveOptions = ref([
     {

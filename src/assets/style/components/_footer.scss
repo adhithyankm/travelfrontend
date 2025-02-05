@@ -5,6 +5,7 @@
     background-color: vars.$black;
     color: vars.$white;
     padding: vars.$base-padding * 2;
+    margin-top: vars.$base-margin * 3;
     .footer-container {
       display: flex;
       flex-wrap: wrap;
@@ -89,7 +90,6 @@
       color: vars.$gray;
     }
   }
-
   @media (max-width:1024px) {
     .footer-container {
       .newsletter-form {

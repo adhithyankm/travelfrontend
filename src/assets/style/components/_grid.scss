@@ -1,14 +1,38 @@
 @use './variables' as vars;
 
 .grid-cards {
-    margin-top: vars.$base-margin ;
-    padding: 2rem;
-    gap: 2rem;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: vars.$base-padding;
+  padding: vars.$base-padding;
+  margin: vars.$base-margin;
+  box-sizing: border-box;
+  .p-card {
+    background-color: vars.$white;
+    border-radius: vars.$base-border-radius;
+    box-shadow: vars.$base-box-shadow;
+    text-align: center;
+    padding: vars.$base-padding;
+    max-height: 150px;
+    max-width: 300px;
+    align-self: center;
+    .p-card-title {
+      font-size: vars.$font-size-lg;
+      font-weight: bold;
+      margin-bottom: vars.$base-padding;
+      color: vars.$black;
+    }
+    .p-card-content {
+      font-size: vars.$base-font-size;
+      color: vars.$gray;
+    }
+  }
 }
-@media (max-width:449px) {
+
+@media (max-width: 768px) {
   .grid-cards {
-    margin: 0;
+    grid-template-columns: 1fr;
+    gap: vars.$base-margin;
   }
 }
 .tourism {

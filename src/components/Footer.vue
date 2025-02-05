@@ -1,7 +1,6 @@
 <template>
-    <footer class="footer">
+    <footer class="footer ">
       <div class="footer-container">
-        <!-- About Section -->
         <div class="footer-section">
           <h3>About</h3>
           <ul>
@@ -13,7 +12,6 @@
             <li>Gallery</li>
           </ul>
         </div>
-        <!-- Support Section -->
         <div class="footer-section">
           <h3>Support</h3>
           <ul>
@@ -25,7 +23,6 @@
             <li>Call Center</li>
           </ul>
         </div>
-        <!-- FAQ Section -->
         <div class="footer-section">
           <h3>FAQ</h3>
           <ul>
@@ -56,7 +53,6 @@
           </div>
         </div>
       </div>
-  
       <div class="footer-bottom">
         ©2023 Mybrand, All Rights Reserved 
       </div>
