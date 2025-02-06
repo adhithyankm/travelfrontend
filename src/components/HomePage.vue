@@ -71,6 +71,7 @@ const tours = [
     image: "../../src/assets/img/pexels-azharphotography-8230166.jpg",
   },
 ];
+  
 const cards = [
   { id: 1, title: "5M+", content: "Total Customers" },
   { id: 2, title: "06+", content: "Years Of Experience" },
