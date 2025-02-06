@@ -49,51 +49,31 @@ import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
 import TourCard from './TourCard.vue';
 import ExperienceCard from './ExperienceCard.vue';
+import k3ithvision from '../assets/img/pexels-k3ithvision-4134644.jpg'
+import ladaktwo from '../assets/img/ladak(2).jpg'
+import TajMahal from '../assets/img/tajindia.jpg'
+import azharphoto from '../assets/img/pexels-azharphotography-8230166.jpg'
 
-//local image path
-// const tours = [
-//   {
-//     title: 'Karnataka Tour',
-//     subtitle: 'Mysore Palace, Karnataka',
-//     image: "../../src/assets/img/pexels-k3ithvision-4134644.jpg",
-//   },
-//   {
-//     title: 'Kargil Tour',
-//     subtitle: 'Ladakh',
-//     image: "../../src/assets/img/ladak (2).jpg",
-//   },
-//   {
-//     title: 'Uttar Pradesh',
-//     subtitle: 'Taj Mahal',
-//     image: "../../src/assets/img/taj india.jpg",
-//   },
-//   {
-//     title: 'Karnataka Tour',
-//     subtitle: 'Hampi',
-//     image: "../../src/assets/img/pexels-azharphotography-8230166.jpg",
-//   },
-// ];
-
-const tours = [ // deployed one path
+const tours = [
   {
     title: 'Karnataka Tour',
     subtitle: 'Mysore Palace, Karnataka',
-    image: "../assets/img/pexels-k3ithvision-4134644.jpg", 
+    image: k3ithvision
   },
   {
     title: 'Kargil Tour',
     subtitle: 'Ladakh',
-    image: "../assets/img/ladak (2).jpg",
+    image: ladaktwo,
   },
   {
     title: 'Uttar Pradesh',
     subtitle: 'Taj Mahal',
-    image: "../assets/img/taj india.jpg",
+    image: TajMahal,
   },
   {
     title: 'Karnataka Tour',
     subtitle: 'Hampi',
-    image: "../assets/img/pexels-azharphotography-8230166.jpg",
+    image: azharphoto,
   },
 ];
   
