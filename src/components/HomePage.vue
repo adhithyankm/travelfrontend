@@ -78,7 +78,7 @@ const tours = [ // deployed one path
   {
     title: 'Karnataka Tour',
     subtitle: 'Mysore Palace, Karnataka',
-    image: "../assets/img/pexels-k3ithvision-4134644.jpg", 
+    image: "./assets/img/pexels-k3ithvision-4134644.jpg", 
   },
   {
     title: 'Kargil Tour',
