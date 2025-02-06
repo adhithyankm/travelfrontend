@@ -63,7 +63,6 @@ const loginForm = ref(true);
 const signinForm = ref(false);
 const toast = useToast();
 const router = useRouter();
-const loading = ref(false);
 
 const form = reactive({
   name: "",
@@ -145,7 +144,6 @@ const handleSignIn = async () => {
 };
 
 const handleLogin = async () => {
-  loading.value = true;
   const isValid = await vv$.value.$validate();
   if (!isValid) {
     toast.add({
@@ -154,7 +152,6 @@ const handleLogin = async () => {
       detail: "Please fill in the required fields correctly.",
       life: 3000,
     });
-    loading.value = false;
     return;
   }
   const isAuthenticated = await store.dispatch("login", logForm);
@@ -165,7 +162,6 @@ const handleLogin = async () => {
       detail: "Invalid credentials. Please try again.",
       life: 3000,
     });
-    loading.value = false;
     return;
   }
   toast.add({
@@ -174,8 +170,6 @@ const handleLogin = async () => {
     detail: `Welcome back, ${logForm.name}`,
     life: 3000,
   });
-
-  loading.value = false;
   router.push("/");
 };
 </script>

@@ -41,26 +41,21 @@ import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
 import store from '@/storage';
 import { computed, onMounted, watch } from "vue";
-import { reactive, ref } from "vue";
+import { reactive } from "vue";
 
 const inputValues = reactive({
   name: '',
   email: '',
   message: ''
 })
-let initialRender = ref(false)
+
 onMounted(() => {
-  initialRender.value = true
   const contactForm = computed(() => store.getters.getContactForm);
   inputValues.name = contactForm.value.name
   inputValues.email = contactForm.value.email
   inputValues.message = contactForm.value.message
-  initialRender.value = false
 })
 watch(inputValues, () => {
-  if (initialRender.value) {
-    return
-  }
   store.dispatch('updateContactForm', { email: inputValues.email, name: inputValues.name, message: inputValues.message })
-})
+},{deep:true})
 </script>
