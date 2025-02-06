@@ -120,7 +120,6 @@ const logRules = computed(() => ({
 const v$ = useVuelidate(rules, { form }, { $autoDirty: true });
 const vv$ = useVuelidate(logRules, { logForm }, { $autoDirty: true });
 const handleSignIn = async () => {
-  loading.value = true;
   const isValid = await v$.value.$validate();
   if (!isValid) {
     toast.add({
@@ -129,7 +128,6 @@ const handleSignIn = async () => {
       detail: "Please correct the errors before submitting.",
       life: 3000,
     });
-    loading.value = false;
     return;
   }
   await store.dispatch("signIn", form);
@@ -139,7 +137,6 @@ const handleSignIn = async () => {
     detail: `Welcome, ${form.name}`,
     life: 3000,
   });
-  loading.value = false;
   router.push("/");
 };
 
