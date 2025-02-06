@@ -53,12 +53,12 @@ const tours = [
   {
     title: 'Karnataka Tour',
     subtitle: 'Mysore Palace, Karnataka',
-    image: "../assets/img/pexels-k3ithvision-4134644.jpg", 
+    image: "../../src/assets/img/pexels-k3ithvision-4134644.jpg",
   },
   {
     title: 'Kargil Tour',
     subtitle: 'Ladakh',
-    image: "../assets/img//ladak (2).jpg",
+    image: "../../src/assets/img/ladak (2).jpg",
   },
   {
     title: 'Uttar Pradesh',
@@ -68,9 +68,10 @@ const tours = [
   {
     title: 'Karnataka Tour',
     subtitle: 'Hampi',
-    image: "../assets/img/pexels-azharphotography-8230166.jpg",
+    image: "../../src/assets/img/pexels-azharphotography-8230166.jpg",
   },
 ];
+  
 const cards = [
   { id: 1, title: "5M+", content: "Total Customers" },
   { id: 2, title: "06+", content: "Years Of Experience" },
