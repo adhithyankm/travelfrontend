@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base:'https://adhithyankm.github.io/travelfrontend/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
