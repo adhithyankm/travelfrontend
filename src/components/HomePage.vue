@@ -85,7 +85,7 @@ const getGridClass = (index) => {
 <style scoped>
 .hero {
   position: relative;
-  background-image: url('../assets/IMG/lake.jpg');
+  background-image: url('../assets/img/lake.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
