@@ -42,7 +42,9 @@ import Footer from "./Footer.vue";
 import store from '@/storage';
 import { computed, onMounted, watch } from "vue";
 import { reactive } from "vue";
+import { useToast } from "primevue";
 
+const toast = useToast();
 const inputValues = reactive({
   name: '',
   email: '',
@@ -58,4 +60,23 @@ onMounted(() => {
 watch(inputValues, () => {
   store.dispatch('updateContactForm', { email: inputValues.email, name: inputValues.name, message: inputValues.message })
 },{deep:true})
+
+const submitForm =() => {
+  if(!inputValues.name || !inputValues.email || !inputValues.message){
+    toast.add({
+      severity: "error",
+      summary: "Please Fill all the inputs.",
+      life: 3000,
+    });
+  }
+  else{
+  toast.add({
+    severity: "success",
+    summary: "Message sent successfully",
+    life: 3000,
+  });
+  inputValues.name= ''
+  inputValues.email=''
+  inputValues.message=''
+}}
 </script>

@@ -20,7 +20,7 @@
           <label for="location">Location:</label>
           <InputText id="location" v-model="form.location" placeholder="Enter your location" />
           <small v-for="(error, index) in v$.form.location.$errors" :key="index">{{ error.$message }}</small>
-          <button type="submit" class="p-button main-button p-component" :disabled="loading">
+          <button type="submit" class="p-button main-button p-component">
             Sign In
           </button>
         </form>
@@ -36,11 +36,7 @@
           <label for="password">Password:</label>
           <InputText id="password" v-model="logForm.password" placeholder="Enter your Password" />
           <small v-for="(error, index) in vv$.logForm.password.$errors" :key="index">{{ error.$message }}</small>
-          <button class="main-button" type="submit" :disabled="loading">Login</button>
-          <div class="card flex justify-center" v-if="loading">
-            <ProgressSpinner style="width: 50px; height: 50px" strokeWidth="8" fill="transparent"
-              animationDuration=".5s" aria-label="Custom ProgressSpinner" />
-          </div>
+          <button class="main-button" type="submit">Login</button>
         </form>
         <p>Click to <button class="back-button" @click="toggleForm">Sign In</button></p>
       </div>
@@ -79,7 +75,7 @@ const logForm = reactive({
 
 const toggleForm = () => {
   signinForm.value = !signinForm.value;
-  loginForm.value = !loginForm.value;
+  loginForm.value = !loginForm.value; 
 };
 
 const rules = computed(() => ({

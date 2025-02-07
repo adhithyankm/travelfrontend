@@ -11,6 +11,8 @@ const store = createStore({
   },
   mutations: {
     setUser(state, user) {
+      console.log(setUser,'hello');
+      
       state.user = user;
       localStorage.setItem('user', JSON.stringify(user));
     },
