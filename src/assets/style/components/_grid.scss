@@ -2,9 +2,9 @@
 
 .grid-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: vars.$base-padding;
-  padding: vars.$base-padding;
+  padding: vars.$base-padding ;
   margin: vars.$base-margin;
   box-sizing: border-box;
   .p-card {
@@ -12,14 +12,13 @@
     border-radius: vars.$base-border-radius;
     box-shadow: vars.$base-box-shadow;
     text-align: center;
-    padding: vars.$base-padding;
+    padding: vars.$base-padding 0px;
     max-height: 150px;
-    max-width: 300px;
+    max-width: 352px;
     align-self: center;
     .p-card-title {
       font-size: vars.$font-size-lg;
       font-weight: bold;
-      margin-bottom: vars.$base-padding;
       color: vars.$black;
     }
     .p-card-content {

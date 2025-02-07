@@ -13,6 +13,10 @@ const store = createStore({
       state.user = user;
       localStorage.setItem('user', JSON.stringify(user));
     },
+    logout(state) {
+      state.user = null;
+      localStorage.removeItem('user');
+    },
     setContactForm(state, payload) {
       state.contactForm.name = payload.name;
       state.contactForm.email = payload.email
@@ -29,6 +33,9 @@ const store = createStore({
         return true; 
       }
       return false; 
+    },
+    logout({ commit }) {
+      commit('logout');
     },
     updateContactForm({ commit }, payload) {
       commit('setContactForm', payload);

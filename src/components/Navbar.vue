@@ -12,16 +12,26 @@
       <li> <router-link to="/"><a>Home</a></router-link></li>
       <li> <router-link to="/gallery">Gallery</router-link></li>
       <li> <router-link to="/contact">Contact</router-link></li>
-      <li class="signin-user" v-if="isAuthenticated"> Welcome {{ user.name }} </li>
-      <li class="signin-item "> 
+      <li class="signin-user" v-if="isAuthenticated && !isLoginPage">Welcome{{ user.name }} </li>
+      <li class="signin-user" v-if="isAuthenticated && !isLoginPage">
+        <button class="logout-button" @click="handleLogout">Logout</button>
+       </li>
+      <li v-if="!isAuthenticated" class="signin-item "> 
         <router-link to="/login"> 
           <button class="login-button">Log In</button>
         </router-link>
       </li>
     </ul>
     <div class="navbar-right">
-      <span v-if="isAuthenticated"> Welcome {{ user.name }} </span>
-      <router-link to="/login"> <button class="login-button">Log In</button></router-link> 
+     <div v-if="isAuthenticated && !isLoginPage">
+        <span > Welcome {{ user.name }} </span>
+        <button class="logout-button" @click="handleLogout">Logout</button>
+     </div>
+     <div v-if="!isAuthenticated">
+        <router-link to="/login">
+           <button class="login-button">Log In</button>
+        </router-link> 
+     </div>
     </div>
   </nav>
 </template>
@@ -29,10 +39,18 @@
 import { computed } from 'vue'
 import { ref } from 'vue'
 import store from '@/storage'
+import { useRoute, useRouter } from "vue-router"
+const router = useRouter()
+const route = useRoute()
 const isMenuOpen = ref(false)
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value
 }
+function handleLogout() {
+  store.dispatch('logout');
+  router.push('/login');
+}
+const isLoginPage = computed(() => route.path === "/login")
 const isAuthenticated = computed(() => store.getters.isAuthenticated)
 const user = computed(() => store.state.user)
 </script>
@@ -76,6 +94,24 @@ const user = computed(() => store.state.user)
   font-size: 24px;
   color: white;
 }
+.login-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #00bcd4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .logout-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #c72817;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;

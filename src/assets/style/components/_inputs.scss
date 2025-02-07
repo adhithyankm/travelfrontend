@@ -31,7 +31,7 @@
     width: 100%;
     padding: vars.$base-padding;
     background-color: vars.$primary;
-    color: vars.$white;
+    color: vars.$white !important;
     border: none;
     border-radius: vars.$base-border-radius;
     font-size: vars.$base-font-size;
@@ -39,6 +39,10 @@
     &:hover {
       background-color: vars.$secondary;
     }
+  
+  }
+  .back-button {
+    margin-top: vars.$base-margin;
   }
   small {
     display: block;

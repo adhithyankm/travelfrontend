@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import 'primeflex/primeflex.css';
+import './assets/style/index.scss'
 import router from './router'
 import PrimeVue from 'primevue/config';
-// import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
 import InputText from 'primevue/inputtext';
 import InputNumber from 'primevue/inputnumber';
@@ -16,7 +17,6 @@ import AccordionContent from 'primevue/accordioncontent';
 import Card from 'primevue/card';
 import Menubar from 'primevue/menubar';
 import Carousel from 'primevue/carousel';
-import './assets/style/index.scss'
 const app = createApp(App)
 app.component('InputText', InputText)
 app.component('InputNumber', InputNumber)

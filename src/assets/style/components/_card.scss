@@ -96,9 +96,10 @@
         .p-accordioncontent {
           padding: vars.$base-padding * 2;
           font-size: vars.$base-font-size;
-          .p-accordioncontent-content {
-            border: none;
-          }
+          overflow: hidden;
+          max-height: 500px;
+          transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+          opacity: 1;
         }
       }
     }
@@ -133,7 +134,7 @@
   gap: vars.$base-margin;
   padding: vars.$base-padding;
   max-width: 800px;
-  margin: 20px auto;
+  margin: vars.$base-margin auto;
   box-shadow: vars.$base-box-shadow;
   padding: vars.$base-padding * 4;
   border-radius: vars.$base-border-radius;

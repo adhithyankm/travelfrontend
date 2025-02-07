@@ -126,8 +126,6 @@ const getGridClass = (index) => {
   height: 95%;
   align-self: center;
   border-radius: 4px;
-}
-.home-search-button {
   background: rgba(7, 7, 7, 0.682);
   color: white;
   border: 1px solid white;
@@ -136,20 +134,6 @@ const getGridClass = (index) => {
 .tour-header {
   text-align: center;
   margin: 2rem 0;
-}
-.tour-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
-.grid-item {
-  overflow: hidden;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-.grid-item:hover {
-  transform: scale(1.05);
 }
 @media (max-width: 768px) {
   .hero-overlay {
