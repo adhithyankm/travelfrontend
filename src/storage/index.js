@@ -1,5 +1,4 @@
 import { createStore } from 'vuex';
-
 const store = createStore({
   state: {
     user: JSON.parse(localStorage.getItem('user')) || null,
@@ -10,9 +9,7 @@ const store = createStore({
     }
   },
   mutations: {
-    setUser(state, user) {
-      console.log(setUser,'hello');
-      
+    setUser(state, user) { 
       state.user = user;
       localStorage.setItem('user', JSON.stringify(user));
     },
@@ -46,5 +43,4 @@ const store = createStore({
     },
   },
 });
-
 export default store;

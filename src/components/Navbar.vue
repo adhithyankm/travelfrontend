@@ -26,15 +26,15 @@
   </nav>
 </template>
 <script setup>
-import { computed } from 'vue';
-import { ref } from 'vue';
-import store from '@/storage';
-const isMenuOpen = ref(false);
+import { computed } from 'vue'
+import { ref } from 'vue'
+import store from '@/storage'
+const isMenuOpen = ref(false)
 function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value;
+  isMenuOpen.value = !isMenuOpen.value
 }
-const isAuthenticated = computed(() => store.getters.isAuthenticated);
-const user = computed(() => store.state.user);
+const isAuthenticated = computed(() => store.getters.isAuthenticated)
+const user = computed(() => store.state.user)
 </script>
 <style scoped>
 .navbar {

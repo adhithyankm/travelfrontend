@@ -45,15 +45,14 @@
   </div>
 </template>
 <script setup>
-import Navbar from './Navbar.vue';
-import Footer from './Footer.vue';
-import TourCard from './TourCard.vue';
-import ExperienceCard from './ExperienceCard.vue';
+import Navbar from './Navbar.vue'
+import Footer from './Footer.vue'
+import TourCard from './TourCard.vue'
+import ExperienceCard from './ExperienceCard.vue'
 import k3ithvision from '../assets/img/pexels-k3ithvision-4134644.jpg'
 import ladaktwo from '../assets/img/ladak(2).jpg'
 import TajMahal from '../assets/img/tajindia.jpg'
 import azharphoto from '../assets/img/pexels-azharphotography-8230166.jpg'
-
 const tours = [
   {
     title: 'Karnataka Tour',
@@ -76,7 +75,6 @@ const tours = [
     image: azharphoto,
   },
 ];
-  
 const cards = [
   { id: 1, title: "5M+", content: "Total Customers" },
   { id: 2, title: "06+", content: "Years Of Experience" },

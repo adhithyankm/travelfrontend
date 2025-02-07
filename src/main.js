@@ -17,7 +17,6 @@ import Card from 'primevue/card';
 import Menubar from 'primevue/menubar';
 import Carousel from 'primevue/carousel';
 import './assets/style/index.scss'
-
 const app = createApp(App)
 app.component('InputText', InputText)
 app.component('InputNumber', InputNumber)

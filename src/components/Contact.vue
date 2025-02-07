@@ -37,20 +37,18 @@
   <Footer />
 </template>
 <script setup>
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
-import store from '@/storage';
-import { computed, onMounted, watch } from "vue";
-import { reactive } from "vue";
-import { useToast } from "primevue";
-
-const toast = useToast();
+import Navbar from "./Navbar.vue"
+import Footer from "./Footer.vue"
+import store from '@/storage'
+import { computed, onMounted, watch } from "vue"
+import { reactive } from "vue"
+import { useToast } from "primevue"
+const toast = useToast()
 const inputValues = reactive({
   name: '',
   email: '',
   message: ''
 })
-
 onMounted(() => {
   const contactForm = computed(() => store.getters.getContactForm);
   inputValues.name = contactForm.value.name
@@ -60,7 +58,6 @@ onMounted(() => {
 watch(inputValues, () => {
   store.dispatch('updateContactForm', { email: inputValues.email, name: inputValues.name, message: inputValues.message })
 },{deep:true})
-
 const submitForm =() => {
   if(!inputValues.name || !inputValues.email || !inputValues.message){
     toast.add({

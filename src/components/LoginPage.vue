@@ -26,7 +26,6 @@
         </form>
         <p>Back to <button class="back-button" @click="toggleForm">Login</button></p>
       </div>
-
       <div v-if="loginForm">
         <h2>Login</h2>
         <form @submit.prevent="handleLogin">
@@ -44,22 +43,19 @@
   </div>
   <Footer />
 </template>
-
 <script setup>
-import { reactive, computed, ref } from "vue";
-import { useVuelidate } from "@vuelidate/core";
-import { required, email, numeric, helpers, alpha, minLength } from "@vuelidate/validators";
-import { useToast } from "primevue/usetoast";
-import { useRouter } from "vue-router";
-import store from "../storage";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
-
-const loginForm = ref(true);
-const signinForm = ref(false);
-const toast = useToast();
-const router = useRouter();
-
+import { reactive, computed, ref } from "vue"
+import { useVuelidate } from "@vuelidate/core"
+import { required, email, numeric, helpers, alpha, minLength } from "@vuelidate/validators"
+import { useToast } from "primevue/usetoast"
+import { useRouter } from "vue-router"
+import store from "../storage"
+import Navbar from "./Navbar.vue"
+import Footer from "./Footer.vue"
+const loginForm = ref(true)
+const signinForm = ref(false)
+const toast = useToast()
+const router = useRouter()
 const form = reactive({
   name: "",
   password: "",
@@ -67,17 +63,14 @@ const form = reactive({
   age: null,
   location: "",
 });
-
 const logForm = reactive({
   name: "",
   password: "",
 });
-
 const toggleForm = () => {
-  signinForm.value = !signinForm.value;
-  loginForm.value = !loginForm.value; 
+  signinForm.value = !signinForm.value
+  loginForm.value = !loginForm.value
 };
-
 const rules = computed(() => ({
   form: {
     name: {
@@ -99,7 +92,6 @@ const rules = computed(() => ({
     location: { required: helpers.withMessage("Location is required", required) },
   },
 }));
-
 const logRules = computed(() => ({
   logForm: {
     name: {
@@ -112,7 +104,6 @@ const logRules = computed(() => ({
     },
   },
 }));
-
 const v$ = useVuelidate(rules, { form }, { $autoDirty: true });
 const vv$ = useVuelidate(logRules, { logForm }, { $autoDirty: true });
 const handleSignIn = async () => {
@@ -135,7 +126,6 @@ const handleSignIn = async () => {
   });
   router.push("/");
 };
-
 const handleLogin = async () => {
   const isValid = await vv$.value.$validate();
   if (!isValid) {

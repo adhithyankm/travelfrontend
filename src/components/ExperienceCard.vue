@@ -23,8 +23,7 @@
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
-
+import { ref } from 'vue'
 const tabs = ref([
     { title: 'Indian Culture', content: "Immerse yourself in India's rich culture, a blend of timeless traditions, vibrant festivals, diverse art forms, and warm hospitality that leaves travelers enchanted.", value: '0' },
     { title: 'Indian Food', content: "Embark on a culinary journey through India, savoring aromatic spices, regional delicacies, and traditional flavors that make every meal an unforgettable experience.", value: '1' },

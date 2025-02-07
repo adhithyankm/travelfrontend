@@ -57,4 +57,4 @@
         ©2023 Mybrand, All Rights Reserved 
       </div>
     </footer>
-  </template>
+</template>
