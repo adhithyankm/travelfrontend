@@ -1,4 +1,4 @@
-import { createStore } from 'vuex';
+import { createStore } from 'vuex'
 const store = createStore({
   state: {
     user: JSON.parse(localStorage.getItem('user')) || null,
@@ -10,44 +10,44 @@ const store = createStore({
   },
   mutations: {
     setUser(state, user) { 
-      state.user = user;
-      localStorage.setItem('user', JSON.stringify(user));
+      state.user = user
+      localStorage.setItem('user', JSON.stringify(user))
     },
     logout(state) {
-      state.user = null;
-      localStorage.removeItem('user');
+      state.user = null
+      localStorage.removeItem('user')
     },
     setContactForm(state, payload) {
-      state.contactForm.name = payload.name;
+      state.contactForm.name = payload.name
       state.contactForm.email = payload.email
       state.contactForm.message = payload.message
     }
   },
   actions: {
     signIn({ commit }, user) {
-      commit('setUser', user);
+      commit('setUser', user)
     },
     login({ state }, credentials) {
-      const storedUser = state.user; 
+      const storedUser = state.user
       if (storedUser && storedUser.name === credentials.name && storedUser.password === credentials.password) {
-        return true; 
+        return true
       }
-      return false; 
+      return false
     },
     logout({ commit }) {
-      commit('logout');
+      commit('logout')
     },
     updateContactForm({ commit }, payload) {
-      commit('setContactForm', payload);
+      commit('setContactForm', payload)
     },
   },
   getters: {
     isAuthenticated(state) {
-      return !!state.user;
+      return !!state.user
     },
     getContactForm(state) {
-      return state.contactForm;
+      return state.contactForm
     },
   },
-});
-export default store;
+})
+export default store

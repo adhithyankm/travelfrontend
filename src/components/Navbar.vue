@@ -1,9 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-left">
-      <h1 class="brand-name">
-          MyBrand
-        </h1>
+      <h1 class="brand-name">MyBrand</h1>
     </div>
     <div class="hamburger" @click="toggleMenu">
       <i class="pi pi-bars"></i>
@@ -47,8 +45,8 @@ function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value
 }
 function handleLogout() {
-  store.dispatch('logout');
-  router.push('/login');
+  store.dispatch('logout')
+  router.push('/login')
 }
 const isLoginPage = computed(() => route.path === "/login")
 const isAuthenticated = computed(() => store.getters.isAuthenticated)

@@ -6,8 +6,8 @@
         <h1>Extraordinary natural and cultural charm</h1>
         <p>Exploring India is an unforgettable adventure.</p>
         <div class="search-bar flex gap-2">
-          <DatePicker class="inputs custom-datepicker" placeholder="Date From:" />
-          <DatePicker class="inputs custom-datepicker" placeholder="Date To:" />
+          <DatePicker class="inputs custom-datepicker" dateFormat="dd/mm/yy" placeholder="Date From:" />
+          <DatePicker class="inputs custom-datepicker" dateFormat="dd/mm/yy" placeholder="Date To:" />
           <InputNumber class="inputs" inputId="integeronly" fluid placeholder="Budget (INR)" />
           <InputNumber class="inputs" inputId="integeronly" fluid placeholder="Guest" />
           <button class="home-search-button p-component">Search</button>
@@ -74,17 +74,17 @@ const tours = [
     subtitle: 'Hampi',
     image: azharphoto,
   },
-];
+]
 const cards = [
   { id: 1, title: "5M+", content: "Total Customers" },
   { id: 2, title: "06+", content: "Years Of Experience" },
   { id: 3, title: "4K", content: "Total Destinations" },
   { id: 4, title: "4.0", content: "Average Rating" },
-];
+]
 const getGridClass = (index) => {
-  const gridClasses = ['span-2 span-md-1', 'span-1', 'span-1', 'span-2'];
-  return gridClasses[index] || 'span-1';
-};
+  const gridClasses = ['span-2 span-md-1', 'span-1', 'span-1', 'span-2']
+  return gridClasses[index] || 'span-1'
+}
 </script>
 <style scoped>
 .hero {

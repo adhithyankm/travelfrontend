@@ -23,13 +23,12 @@
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
-
+import { ref } from 'vue'
 const tabs = ref([
     { title: 'Indian Culture', content: "Immerse yourself in India's rich culture, a blend of timeless traditions, vibrant festivals, diverse art forms, and warm hospitality that leaves travelers enchanted.", value: '0' },
     { title: 'Indian Food', content: "Embark on a culinary journey through India, savoring aromatic spices, regional delicacies, and traditional flavors that make every meal an unforgettable experience.", value: '1' },
     { title: 'Beaches and Nature', content: "Explore India's pristine beaches, lush forests, and majestic landscapes, offering serene escapes and breathtaking views for nature lovers and peace seekers alike.", value: '2' },
     { title: 'Adventure', content: "India promises thrilling adventures, from trekking in the Himalayas and river rafting to desert safaris and wildlife explorations, catering to every adventurer's dream.", value: '3' },
     { title: 'Lodging', content: "Experience India's diverse accommodations, from luxurious heritage hotels and serene beach resorts to budget-friendly homestays, ensuring comfort and charm for every traveler.", value: '4' }
-]);
+])
 </script>

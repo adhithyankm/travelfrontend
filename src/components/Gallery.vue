@@ -1,8 +1,7 @@
 <template>
-    <Navbar  />
+    <Navbar />
     <div class="gallery-card  ">
-        <Carousel :value="indianCulture" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular
-            :autoplayInterval="3000">
+        <Carousel :value="indianCulture" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
             <template #item="slotProps">
                 <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
                     <div class="mb-4">
@@ -26,7 +25,7 @@ const indianCulture = [
     { image: 'https://images.pexels.com/photos/27489413/pexels-photo-27489413.jpeg' },
     { image: 'https://images.pexels.com/photos/27489414/pexels-photo-27489414.jpeg' },
     { image: 'https://images.pexels.com/photos/27489416/pexels-photo-27489416.jpeg' },
-];
+]
 const responsiveOptions = ref([
     {
         breakpoint: '1400px',
@@ -48,5 +47,5 @@ const responsiveOptions = ref([
         numVisible: 1,
         numScroll: 1
     }
-]);
+])
 </script>

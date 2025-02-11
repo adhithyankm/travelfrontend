@@ -50,30 +50,31 @@ const inputValues = reactive({
   message: ''
 })
 onMounted(() => {
-  const contactForm = computed(() => store.getters.getContactForm);
+  const contactForm = computed(() => store.getters.getContactForm)
   inputValues.name = contactForm.value.name
   inputValues.email = contactForm.value.email
   inputValues.message = contactForm.value.message
 })
 watch(inputValues, () => {
   store.dispatch('updateContactForm', { email: inputValues.email, name: inputValues.name, message: inputValues.message })
-},{deep:true})
-const submitForm =() => {
-  if(!inputValues.name || !inputValues.email || !inputValues.message){
+}, { deep: true })
+const submitForm = () => {
+  if (!inputValues.name || !inputValues.email || !inputValues.message) {
     toast.add({
       severity: "error",
       summary: "Please Fill all the inputs.",
       life: 3000,
-    });
+    })
   }
-  else{
-  toast.add({
-    severity: "success",
-    summary: "Message sent successfully",
-    life: 3000,
-  });
-  inputValues.name= ''
-  inputValues.email=''
-  inputValues.message=''
-}}
+  else {
+    toast.add({
+      severity: "success",
+      summary: "Message sent successfully",
+      life: 3000,
+    })
+    inputValues.name = ''
+    inputValues.email = ''
+    inputValues.message = ''
+  }
+}
 </script>
