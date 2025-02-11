@@ -1,5 +1,4 @@
 @use './variables' as vars;
-
 .form-container {
   background: vars.$white;
   padding: vars.$base-padding * 3;
@@ -39,7 +38,6 @@
     &:hover {
       background-color: vars.$secondary;
     }
-  
   }
   .back-button {
     margin-top: vars.$base-margin;

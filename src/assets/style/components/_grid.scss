@@ -1,5 +1,4 @@
 @use './variables' as vars;
-
 .grid-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -27,7 +26,6 @@
     }
   }
 }
-
 @media (max-width: 768px) {
   .grid-cards {
     grid-template-columns: 1fr;
